@@ -44,12 +44,12 @@ function runX(x) {
 function getHumanChoice() {
     let humanChoice = prompt("Rock, Paper, Scissors?");
     let loweredChoice = humanChoice.toLowerCase();
-    if (!(loweredChoice == 'rock' || loweredChoice == 'paper' || loweredChoice == 'scissors')) {
-        console.log("ERRROR!")
-        return null;
+    if (loweredChoice == 'rock' || loweredChoice == 'paper' || loweredChoice == 'scissors') {
+        return loweredChoice;
     }
-    return loweredChoice;
-    }
+    console.log("ERRROR!")
+    return null;
+}
 
 let humanScore = 0;
 let computerScore = 0;
